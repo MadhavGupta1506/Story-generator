@@ -6,6 +6,6 @@ tone="Thriller, Comedy, Drama, Romance, Horror, Fantasy, Science Fiction, Myster
 
 tone_of_story=st.sidebar.selectbox("Choose your writing tone",options=tone)
 st.title("Daily Story Writer!")
-story_input=streamlit.text_input("Write a story")
+story_input=streamlit.text_area("Write a story", height=200,)
 if(story_input):
     st.write(generator_func(story_input,tone_of_story)) 
